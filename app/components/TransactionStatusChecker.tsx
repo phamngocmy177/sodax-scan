@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import { useState } from 'react';
@@ -91,7 +92,7 @@ export default function TransactionStatusChecker() {
       });
 
       const data = await response.json();
-
+      console.log('data', data);
       if (!response.ok) {
         throw new Error(data.error || 'Failed to fetch status');
       }

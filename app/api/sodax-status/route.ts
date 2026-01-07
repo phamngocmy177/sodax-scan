@@ -276,6 +276,7 @@ export async function POST(request: NextRequest) {
       intentStatus: statusData.intentStatus,
       packetsData: statusData.packetsData,
       transactionOutHash: statusData.transactionOutHash,
+      statusData
     });
   } catch (error: any) {
     console.error('API error:', error);
